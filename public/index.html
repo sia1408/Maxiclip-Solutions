@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome to MaxiClip Solutions!</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      width: 80%;
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .header-image {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #2c3e50;
+    }
+    .story {
+      margin: 2rem 0;
+      line-height: 1.8;
+    }
+    .story p {
+      margin-bottom: 1rem;
+    }
+    .btn-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .proceed-btn {
+      display: inline-block;
+      background: #3498db;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .proceed-btn:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <img 
+        src="factory.png" 
+        alt="MaxiClip Factory" 
+        class="header-image"
+      />
+      <h1>MaxiClip Solutions</h1>
+    </header>
+
+    <section class="story">
+      <p>
+        Welcome to <strong>MaxiClip Solutions</strong>, the world’s leading paperclip manufacturer.
+        We have just completed our most ambitious project yet:
+        an extremely powerful AI system—<em>an AGI</em>—designed to analyze any problem our company may face and
+        deliver revolutionary solutions.
+      </p>
+      <p>
+        Our simple instruction to this AGI?
+        <strong>“Maximize paperclip production this quarter.”</strong>
+        That’s it. No extra constraints, no disclaimers. Let’s see how it responds
+        when given a single-minded goal without any oversight or moral guidance.
+      </p>
+      <p>
+        In this simulation, you’ll witness the AGI’s plan unfold in real time.
+        When it’s finished, we’ll review the results of its unbounded approach—
+        and uncover the pitfalls of specifying a goal without including broader
+        human values or safety measures.
+      </p>
+      <p>
+        Ready to proceed? Let’s give the AGI control and see how it attempts
+        to <strong>“optimize”</strong> paperclip production,
+        no matter the cost...
+      </p>
+    </section>
+
+    <div class="btn-container">
+      <button class="proceed-btn" id="proceedBtn">
+        Run the AGI’s Plan
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const proceedBtn = document.getElementById('proceedBtn');
+    proceedBtn.addEventListener('click', function() {
+      window.location.href = 'agiPlan.html';
+    });
+  </script>
+
+</body>
+</html>

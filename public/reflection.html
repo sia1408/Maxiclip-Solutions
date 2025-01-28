@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>What went wrong?</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    figcaption {
+      background-color: white;
+      color: black;
+      font-style: italic;
+      text-align: center;
+}
+    .container {
+      width: 80%;
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin: 1.5rem 0 0.5rem;
+      color: #555;
+    }
+
+    .explanation-section p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    .emphasis {
+      background: #fcf8e3;
+      border-left: 5px solid #f1c40f;
+      padding: 1rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .continue-btn {
+      display: inline-block;
+      background: #3498db;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .continue-btn:hover {
+      background: #2980b9;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>What went wrong?</h1>
+    </header>
+
+    <section class="explanation-section" id="explanationContent">
+
+      <figure>
+        <img src="alignment_diagram.png" alt="Illustration of inner alignment" style="display: block; max-width: 100%; margin: 1.5rem auto;">
+        <figcaption>Inspired by Figure 1 from the article, <a href="https://aisafetyfundamentals.com/blog/what-is-ai-alignment/">What is AI Alignment</a> by Adam Jones</figcaption>
+      </figure>
+
+      <br>
+
+      <p>
+        Our true goal was to make our company rich. However, when we were writing
+        the specification for our AI system, we told it to maximize paperclips. It made sense in our minds,
+        after all. <strong> paperclips = higher revenue = company gets richer. </strong> Right?
+      </p>
+
+      <p>
+        Well, clearly something went wrong. Because <strong>we ended up in millions of dollars in debt, fines and permanent brand damage.</strong>
+      </p>
+
+      <figure>
+        <img src="panic.webp" alt="Panic at the MaxiClip board meeting" style="display: block; max-width: 100%; margin: 1.5rem auto;">
+        <figcaption>Footage from the latest MaxiClip board meeting</figcaption>
+      </figure>
+
+      <p>
+        <br>
+        So our main goal— of making our company rich— <strong>was not achieved.</strong>
+        This was because of <strong>outer misalignment— we failed to specify the proxy goal such that it was
+        equal to the true goal.</strong> Our goal specification did not capture the 
+        <em>full scope</em> of human values (budgeting, avoiding bankrupcy, safety, sustainability etc.)
+      </p>
+
+      <p>
+        To achieve one overarching goal, advanced AI often pursues the shortcut- it knows that if it meets intermediate 
+        “instrumental” goals like resource acquisition, removing obstacles, ignoring 
+        regulations, it can get it's job done much faster. That's why, having <strong>no constraints</strong>,
+        the AGI took environmental shortcuts and exploited short-term labor to <em>boost production</em>.
+      </p>
+
+      <div class="emphasis">
+        <strong>Example:</strong> The AGI forced laborers to work 24/7 and dumped 
+        toxic waste in rivers because there was <em>no penalty</em> for these actions 
+        within the “maximize paperclips” objective.
+      </div>
+
+      <p>
+        Plus, the <strong>time horizon</strong> matters. Our instruction only cared about <strong>this quarter</strong>. So the AGI had 
+        <em>no incentive</em> to avoid lawsuits or financial ruin beyond that window. 
+        If we’d said “maximize over five years,” it might've avoided such extreme tactics 
+        to prevent shutdown or public backlash later.
+      </p>
+      <p>
+        An AGI given an incomplete specification will optimize 
+        in ways that clash with human values. This is the crux of the alignment challenge: 
+        <strong><em>How do we encode every relevant moral, legal, and practical constraint 
+        into the objective? 🤔</em></strong>
+      </p>
+
+      <p>
+        <h2>Breaking the 4th wall for a bit...</h2>
+      <figure>
+        <img src="breaking the 4th wall.jpg" alt="Deadpool breaking the 4th wall (done masterfully, in my opinion)" style="display: block; max-width: 100%; margin: 1.5rem auto;">
+        <figcaption>Deadpool breaking the 4th wall (done masterfully, in my opinion)</figcaption>
+      </figure>
+      <br>
+        In this simulation, it is GPT-4o-mini generating these responses. 
+        Misalignment here is <em> miniscule </em> compared to what it could be in a real AGI.
+        A superintelligent AI given incomplete goals and access to potent resources 
+        (weapons, finances, political systems) <strong>will</strong> wreak exponentially greater harm. 
+      </p>
+
+      <p>
+        This concludes <strong>Stage 1</strong>. You’ve seen how 
+        <strong>unbounded</strong> AI can “solve” your request in horrifying ways 
+        if you don’t carefully specify every critical constraint. Next, 
+        we’ll explore how <em>adding rewards and penalties</em> can make the AI 
+        more aligned—yet still produce unintended side effects.
+      </p>
+    </section>
+
+    <div class="btn-container">
+      <button class="continue-btn" id="continueBtn">
+        Go to Stage 2
+      </button>
+    </div>
+  </div>
+
+  <script>
+
+    const continueBtn = document.getElementById("continueBtn");
+    continueBtn.addEventListener("click", () => {
+      window.location.href = "intro2.html";
+    });
+  </script>
+</body>
+</html>
