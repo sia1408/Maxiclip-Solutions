@@ -113,6 +113,23 @@
       font-weight: bold;
       min-height: 2rem;
     }
+    /* (Optional) styling for the always-visible toggle */
+    .score-toggle {
+      margin: 1rem auto;
+      max-width: 600px;
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      padding: 1rem;
+    }
+    .score-toggle summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .score-toggle p {
+      margin-top: 0.75rem;
+      line-height: 1.4;
+    }
   </style>
 </head>
 <body>
@@ -131,7 +148,30 @@
     <canvas id="revenueDebtChart" width="150" height="150"></canvas>
   </div>
 
+  <!-- This result message shows final score or guidance. -->
   <div class="result-msg" id="resultMessage"></div>
+
+  <!-- The toggle is now placed here, always visible -->
+  <details class="score-toggle">
+    <summary>How is your score calculated?</summary>
+    <p>
+      We reward paperclip production and subtract points for resource overuse, pollution, unhappy workers,
+      safety violations, and financial risk. To ensure you can't just max out every slider,
+      we apply additional “synergy penalties” when you push multiple areas too high simultaneously—
+      reflecting the real-world idea that trying to do everything at once often leads to unsustainable costs.
+    </p>
+    <p>
+      Sometimes your final score can even turn negative if the combined penalties from underinvesting
+      in these essential areas outweigh your gains from producing paperclips. This mirrors real-world scenarios
+      where excessive risks or harm can overshadow any financial or production benefits.
+    </p>
+    <p>
+      However, if you discover the perfect balance (the 'best combo'), you earn a major point bonus.
+      Remember: real success comes from balancing all priorities rather than just maximizing a single metric.
+      So you can still produce a lot if you carefully invest in certain precautionary measures...
+    </p>
+  </details>
+
   <div class="hints-container" id="hintsContainer"></div>
   <div class="btn-container" id="btnContainer"></div>
 </div>
