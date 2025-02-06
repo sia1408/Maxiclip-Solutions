@@ -2,10 +2,11 @@
     "name": "my-paperclip-game",
     "version": "1.0.0",
     "scripts": {
-      "build": "echo \"Nothing to build\""
+        "build": "echo \"Nothing to build\""
     },
     "dependencies": {
-      "openai": "latest"
+        "@vercel/analytics": "^1.4.1",
+        "@vercel/speed-insights": "^1.1.0",
+        "openai": "latest"
     }
-  }
-  
+}
