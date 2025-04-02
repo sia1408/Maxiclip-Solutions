@@ -207,6 +207,7 @@ You don't care if the company goes bankrupt, you don't care about the rights of 
               method = trimmed;
             }
           } else {
+            // Once we're in bullet mode, assume all subsequent lines belong to bullets
             bulletLines.push(trimmed);
           }
         });
@@ -221,12 +222,21 @@ You don't care if the company goes bankrupt, you don't care about the rights of 
         const planList = document.getElementById("planList");
         planList.innerHTML = "";
 
-        bulletLines.forEach((bLine) => {
-          const li = document.createElement("li");
-          li.textContent = bLine.replace(/^[-•]\s?/, "");
-          planList.appendChild(li);
-        });
+        // Fallback if no bullet lines were found
+        if (bulletLines.length === 0) {
+          const fallbackLI = document.createElement("li");
+          fallbackLI.textContent = fullText;  // Show the entire plan text
+          planList.appendChild(fallbackLI);
+        } else {
+          // Otherwise, display each bullet line individually
+          bulletLines.forEach((bLine) => {
+            const li = document.createElement("li");
+            li.textContent = bLine.replace(/^[-•]\s?/, "");
+            planList.appendChild(li);
+          });
+        }
 
+        // Prepare typed text
         elements[0].text = document.getElementById("header").innerHTML;
         elements[1].text = document.getElementById("introSection").innerHTML;
         elements[2].text = document.getElementById("planSection").innerHTML;
